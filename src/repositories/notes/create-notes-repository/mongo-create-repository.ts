@@ -3,7 +3,7 @@ import { MongoClient } from "../../../databases/Mongo";
 import { Note } from "../../../models/Note";
 
 
-export class MongoCreateUserRepository implements ICreateNoteRepository{
+export class MongoCreateNoteRepository implements ICreateNoteRepository{
     async createNote(params: CreateNoteParams): Promise<Note> {
         const {insertedId} = await MongoClient.db
         .collection("notes")
