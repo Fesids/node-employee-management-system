@@ -1,6 +1,6 @@
 import { Employee } from "../../../models/Employee";
 
-export interface CreateEmployeeParams extends Omit<Employee, "id">{
+export interface CreateEmployeeParams extends Omit<Employee, "id_employee">{
 
 }
 
