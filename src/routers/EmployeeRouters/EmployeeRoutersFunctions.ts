@@ -44,4 +44,31 @@ export const DeleteEmployee = (req:any, res:any) =>{
     })
 }
 
+export const UpdateEmployee = (req:any, res:any) =>{
+    const emp_id = req.params.id;
+    let q = "select * from employees where id_employee=?"
+    DB.query(q, [emp_id], (err, data)=>{
+        if (err) return res.status(404).send(data);
+        else{
+
+            const fields_to_update = [
+                req.body.first_name,
+                req.body.last_name,
+                req.body.email,
+                req.body.img,
+                req.body.department
+
+            ]
+            q = "update employees set first_name=?, last_name=?, email=?, img=?, department=?";
+
+            DB.query(q, fields_to_update, (err, data)=>{
+                if (err) res.status(404).send("failed to update");
+                res.status(200).send(data);
+            })
+
+        }
+    })
+
+
+}
 
