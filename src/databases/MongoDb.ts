@@ -1,4 +1,4 @@
-/*import {MongoClient as Mongo, Db} from "mongodb";
+import {MongoClient as Mongo, Db} from "mongodb";
 
 
 export const MongoClient = {
@@ -16,9 +16,9 @@ export const MongoClient = {
 
         console.log("connected to mongo");
     }
-}*/
+}
 
-import mongoose from "mongoose";
+/*import mongoose from "mongoose";
 import bcrypt from "bcryptjs";
 import { BlockList } from "net";
 import { string } from "prop-types";
@@ -83,3 +83,4 @@ UserSchema.methods.comparePassword = function(candidatePassword: string,
 }
 
 export const User = mongoose.model("user", UserSchema);
+*/
