@@ -1,7 +1,7 @@
 import {Request, Response} from "express";
 import {param, validationResult} from "express-validator";
 import jwt from "jsonwebtoken";
-import { CreateUserController } from "../../controllers/auth/AuthCreateController";
+import { CreateUserController } from "../../controllers/auth/auth-create-controller/AuthCreateController";
 
 import { IUser } from "../../models/User";
 import { MongoCreateUserRepository } from "../../repositories/auth/create-auth-repository";

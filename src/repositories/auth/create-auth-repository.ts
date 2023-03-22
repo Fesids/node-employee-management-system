@@ -1,4 +1,4 @@
-import { CreateUserParams, ICreateUserRepository } from "../../controllers/auth/protocols";
+import { CreateUserParams, ICreateUserRepository } from "../../controllers/auth/auth-create-controller/protocols";
 import { MongoClient } from "../../databases/MongoDb";
 import { IUser } from "../../models/User";
 import bcrypt from "bcryptjs"
