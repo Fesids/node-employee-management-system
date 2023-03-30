@@ -4,6 +4,10 @@ export interface LoginParams extends Omit<IUser, "id" | "user_name" | "role">{
 
 }
 
+export interface IUserLogin extends IUser{
+    token : string
+}
+
 export interface ILoginRepository {
-    login(params: LoginParams):Promise<IUser>
+    login(body:LoginParams):Promise<IUserLogin>
 }

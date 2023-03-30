@@ -5,6 +5,12 @@ export interface HttpResponse<T>{
     body: T
 }
 
+export interface HttpResponseLogin<T>{
+    statusCode: number,
+    body:T,
+    token?: string
+}
+
 export interface HttpRequest<B>{
     params?: any,
     headers?: any,
@@ -13,4 +19,8 @@ export interface HttpRequest<B>{
 
 export interface IController {
     handle(httpRequest: HttpRequest<unknown>): Promise<HttpResponse<unknown>>
+}
+
+export interface IControllerLogin{
+    handle(httpRequest: HttpRequest<unknown>): Promise<HttpResponseLogin<unknown>>
 }
